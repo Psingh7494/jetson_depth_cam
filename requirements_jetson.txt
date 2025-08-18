@@ -1,0 +1,50 @@
+# Intel RealSense D435 Requirements for NVIDIA Jetson AGX Xavier
+# 
+# Install with: pip install -r requirements_jetson.txt
+#
+# For optimal performance, ensure you have:
+# 1. JetPack 4.6.1 or later installed
+# 2. OpenCV compiled with CUDA support
+# 3. Performance mode enabled (sudo nvpmodel -m 0 && sudo jetson_clocks)
+
+# Core RealSense Library
+pyrealsense2>=2.54.1
+
+# Computer Vision and Image Processing
+# Note: For best performance, compile OpenCV with CUDA support
+# or install the Jetson-optimized version
+opencv-python>=4.5.0
+
+# Numerical Computing
+numpy>=1.19.0
+
+# Image Processing and Utilities
+Pillow>=8.0.0
+
+# Optional: System Monitoring
+psutil>=5.8.0
+
+# Optional: Video Processing
+imageio>=2.9.0
+imageio-ffmpeg>=0.4.0
+
+# Optional: Data Visualization
+matplotlib>=3.3.0
+
+# Optional: Progress Bars and CLI Utilities
+tqdm>=4.62.0
+
+# Optional: Configuration Management
+pyyaml>=5.4.0
+
+# Development and Testing (optional)
+pytest>=6.2.0
+black>=21.0.0
+flake8>=3.9.0
+
+# Jetson-specific optimizations
+# These packages may provide additional performance benefits
+# Uncomment if available:
+# jetson-stats  # Monitor Jetson performance (install via: sudo -H pip install jetson-stats)
+# cupy-cuda102  # GPU-accelerated NumPy replacement (if using CUDA 10.2)
+# numba>=0.53.0  # JIT compilation for performance
