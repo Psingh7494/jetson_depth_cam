@@ -268,7 +268,7 @@ def main():
     parser.add_argument('-w', '--width', type=int, default=640, 
                        choices=[640, 848, 1280], 
                        help='Frame width (default: 640)')
-    parser.add_argument('-h', '--height', type=int, default=480, 
+    parser.add_argument('--height', type=int, default=480, 
                        choices=[480, 480, 720], 
                        help='Frame height (default: 480)')
     parser.add_argument('-f', '--fps', type=int, default=30, 
